@@ -13,9 +13,9 @@ if [ ! -d ".git" ]; then
 fi
 
 
-git remote add origin git@github.com:ecom-moce/ecom-moce.github.io.git
-git branch -M main
-git push -u origin main
+#git remote add origin git@github.com:ecom-moce/ecom-moce.github.io.git
+#git branch -M main
+#git push -u origin main
 
 git add -A
 git commit -m "Website update."
