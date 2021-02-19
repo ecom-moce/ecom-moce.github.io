@@ -1,18 +1,68 @@
-#!/bin/bash
+1. Suppose you have a 'GitHub' account. Your account name is: 'xxxxxx' then you have to follow these rules:
 
-cd $1
+2. Go to 'https://github.com/'
 
-if [ ! -d ".git" ]; then
-	echo "# USER-NAME.github.io" >> README.md
-	git init
-	git add README.md
-	git commit -m "first commit"
-	git branch -M main
-	git remote add origin git@github.com:USER-NAME/USER-NAME.github.io.git
+3. 'Sign in'
+
+4. Click by 'Repositories' on 'New'
+
+5. Create a new repository:
+
+		Owner			Repository name
+		xxxxxx		/	xxxxxx.github.io
+
+		'Create repository'
+
+6. Now back to your pc.
+
+7. Make a directory: /home/user/xxxxxx.github.io.
+
+8. Make a script with 'gedit' or 'vim' or whatever you have:
+
+	#!/bin/bash
+
+	cd $1
+
+	if [ ! -d ".git" ]; then
+		echo "# xxxxxx.github.io" >> README.md
+		git init
+		git add README.md
+		git commit -m "first commit"
+		git branch -M main
+		git remote add origin git@github.com:xxxxxx/xxxxxx.github.io.git
+		git push -u origin main
+	fi
+
+	git add -A
+	git commit -m "Website update."
 	git push -u origin main
-fi
 
-git add -A
-git commit -m "Website update."
-git push -u origin main
+And save this as: '/home/user/xxxxxx.github.io/export.sh'
+
+
+
+9. Enter 'Bootstrap Studio'.
+
+10. Click on 'Help | Getting Started'.
+
+11. Click on 'Save' and give as name: 'Getting Started 2021-02-19.bsdesign' and save it.
+
+12. Click on 'Settings' and click on 'Export' then give the following information:
+
+	'Export Destination': /home/user/xxxxxx.github.io
+	(this is the directory you have made in 7.)
+
+	and click on 'Advanced', which will open a window with 'Export Script',
+	on the line you fill in:
+	/home/user/xxxxxx.github.io/export.sh
+
+13. Click on 'Save'
+
+14. Click on 'Export'
+
+
+	
+	
+	
+
 
